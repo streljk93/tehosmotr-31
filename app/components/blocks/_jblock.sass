@@ -1,0 +1,30 @@
+.jblock
+	&__wrap
+		padding-top: 80px
+		padding-bottom: 80px
+	&__title
+		@extend %title-middle
+		margin-bottom: 60px
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		&_align-left
+			align-items: flex-start
+			text-align: left
+		&:after
+			content: ''
+			display: block
+			height: 4px
+			max-width: 150px
+			width: 100%
+			background: $jcolor-accent
+			margin-top: 20px
+	&__title_only
+		font-size: 2.5rem
+		line-height: 3rem
+		margin-top: 60px
+		margin-bottom: 60px
+		&:after
+			content: none
+	&__content

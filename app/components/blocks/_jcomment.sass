@@ -1,0 +1,14 @@
+.jcomment
+    &__title
+        @extend %title-low
+    &__subtitle
+        font-weight: bold
+        text-transform: lowercase
+        color: $jcolor-accent
+        padding-top: 8px
+        padding-bottom: 30px
+    &__message
+        text-align: justify
+        &:after, &:before
+            content: '"'
+        line-height: 1.8rem 

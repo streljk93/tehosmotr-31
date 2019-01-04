@@ -1,0 +1,29 @@
+.jheader
+	background: linear-gradient($jcolor-primary, $jcolor-accent)
+	&__wrap
+		display: flex
+		flex-direction: row
+		height: 100vh
+	&__content
+		height: 100%
+		flex: 1
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding-bottom: 80px
+	&__title
+		@extend %title-middle
+		color: $jcolor-white
+		padding-bottom: 15px
+	&__text
+		line-height: $font-size-base + .8
+		color: $jcolor-white
+	&__buttons
+		padding-top: 25px
+	&__image
+		height: 100%
+		flex: 2
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding-bottom: 80px

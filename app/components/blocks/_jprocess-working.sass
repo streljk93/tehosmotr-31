@@ -1,0 +1,27 @@
+.jprocess-working
+    padding: 15px 0
+    &:hover
+        .jprocess-working
+            &__number
+                left: -15px
+                color: $jcolor-accent
+                border: 4px solid $jcolor-accent
+            &__title
+                color: $jcolor-accent
+    &__number
+        border: 4px solid $jcolor-teal
+        border-radius: $border-radius
+        color: $jcolor-teal
+        display: inline-block
+        padding: 35px
+        margin: 0 25px 5px 0
+        font-size: 3rem
+        font-family: Russo One
+        float: left
+        position: relative
+        left: 0
+        transition: left .5s, color .5s, border .5s
+    &__title
+        @extend %title-low
+        padding-bottom: 15px
+    &__content
