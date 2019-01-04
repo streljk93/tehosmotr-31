@@ -6,6 +6,9 @@
         margin: 0 !important
         display: flex
         justify-content: space-between
+    &__mobile
+        margin: 0 !important
+        display: none !important
     &__logo
         @extend %title
         display: flex
@@ -18,3 +21,10 @@
         flex-direction: row
         justify-content: flex-end
         flex: 1
+
+@media only screen and (max-width: 1199px)
+    .jmenu
+        &__desktop
+            display: none !important
+        &__mobile
+            display: flex !important
