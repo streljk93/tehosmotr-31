@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "gulp",
+    "start": "node server",
     "postinstall": "npm install express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
