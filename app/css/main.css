@@ -25202,6 +25202,11 @@ body.pushable > .pusher {
     background: #00B5AD;
     margin-top: 20px; }
 
+.jblock__title_white {
+  color: #FFFFFF !important; }
+  .jblock__title_white:after {
+    background: #FFFFFF !important; }
+
 .jblock__title_only {
   font-size: 2.5rem;
   line-height: 3rem;
