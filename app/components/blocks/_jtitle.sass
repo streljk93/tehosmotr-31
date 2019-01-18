@@ -1,0 +1,26 @@
+.jtitle
+    position: relative
+    &__wrap
+        height: 300px
+        width: 100%
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        display: flex
+        justify-content: center
+        align-items: center
+    &:before
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        background: linear-gradient($jcolor-primary, $jcolor-accent)
+        opacity: .6
+        position: absolute
+        top: 0
+        left: 0
+    &__title
+        @extend %title-high
+        color: $jcolor-white
+        z-index: 1
+        text-align: center
