@@ -1,9 +1,9 @@
 (function () {
 
     // check
-    if (!document.querySelector('.jstepper')) return false;
+    if (!document.querySelector('.jstepper-block')) return false;
 
-    var stepper = document.querySelector('.jstepper');
+    var stepper = document.querySelector('.jstepper-block');
     var stepList = stepper.querySelectorAll('.jstep');
 
     function hideAllContent(stepList) {
@@ -23,9 +23,8 @@
     }
 
     function showImage(step) {
-        var image = step.attributes.image.value;
-        var img = stepper.querySelector('.jstepper__image img');
-        img.src = image;
+        var image = step.attributes['data-image'].value;
+        stepper.attributes.style.value = 'background-image: url(' + image + ')';
     }
 
     stepList.forEach(function (step) {
@@ -33,7 +32,6 @@
             hideAllContent(stepList);
             showContent(this);
             showImage(this);
-            // console.log(this.attributes.image.value);
         });
     });
 

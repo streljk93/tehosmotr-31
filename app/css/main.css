@@ -25292,33 +25292,30 @@ body.pushable > .pusher {
     z-index: 1;
     text-align: center; }
 
-.jstepper__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-
-.jstepper__stepper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding-right: 20px; }
-
-.jstepper__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-  .jstepper__image img {
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 5px; }
-
-.jstep__wrap {
-  padding-top: 5px;
-  padding-bottom: 5px; }
+.jstepper-block {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #00B5AD;
+  -webkit-transition: background-image .2s;
+  transition: background-image .2s; }
+  .jstepper-block__wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 500px; }
+  .jstepper-block__content {
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 600px;
+    padding: 25px; }
+  .jstepper-block__item {
+    padding-top: 5px;
+    padding-bottom: 5px; }
 
 .jstep__title {
   display: -webkit-box;
@@ -25341,9 +25338,17 @@ body.pushable > .pusher {
   border-left-width: 3px;
   border-left-color: #00B5AD;
   border-left-style: solid;
-  line-height: 25px; }
+  line-height: 25px;
+  max-height: 600px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: max-height .8s, opacity .8s, visibility .8s;
+  transition: max-height .8s, opacity .8s, visibility .8s; }
   .jstep__content-hide {
-    display: none; }
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: 0; }
 
 *:focus {
   outline: none; }

@@ -32,7 +32,7 @@ gulp.task('jsLib', function() {
 			'node_modules/jquery/dist/jquery.min.js',
 			'node_modules/slick-carousel/slick/slick.min.js',
             'node_modules/semantic-ui-css/semantic.min.js',
-        	'app/components/blocks/jstepper/index.js',
+        	'app/components/blocks/jstepper-block/index.js',
 		])
 		.pipe(sourcemaps.init())
 		.pipe(babel())

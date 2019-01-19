@@ -1,7 +1,4 @@
 .jstep
-    &__wrap
-        padding-top: 5px
-        padding-bottom: 5px
     &__title
         display: flex
         flex-direction: row
@@ -18,5 +15,12 @@
         border-left-color: $jcolor-accent
         border-left-style: solid
         line-height: 25px
+        max-height: 600px
+        opacity: 1
+        visibility: visible
+        transition: max-height .8s, opacity .8s, visibility .8s
         &-hide
-            display: none
+            max-height: 0
+            opacity: 0
+            visibility: hidden
+            margin-bottom: 0
