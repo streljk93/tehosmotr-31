@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "./node_modules/gulp/bin/gulp.js && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,5 +1,89 @@
 'use strict';
 
+function searchToObject() {
+    var pairs = window.location.search.substring(1).split("&"),
+        obj = {},
+        pair,
+        i;
+
+    for ( i in pairs ) {
+        if ( pairs[i] === "" ) continue;
+
+        pair = pairs[i].split("=");
+        obj[ decodeURIComponent( pair[0] ) ] = decodeURIComponent( pair[1] );
+    }
+
+    return obj;
+}
+
+// record
+(function () {
+    
+    // private variables
+    var rootNode = document.getElementById('js-record'),
+        categories = {
+            m1: 500,
+            n1: 530,
+            m2: 900,
+            m3: 1080,
+            n2: 1050,
+            n3: 1130,
+            o12: 420,
+            o34: 700,
+            l: 170,
+        };
+
+    function checkPage() {
+        if (rootNode) return true;
+        return false;
+    }
+
+    function getPrice(category) {
+        return categories[category];
+    }
+
+    function onChangeCategory(e) {
+        var priceNode = rootNode.querySelector('input[name=price]'),
+            categorySelected = '';
+
+        categorySelected = this.getAttribute('data-value')
+            ? this.getAttribute('data-value')
+            : this.value;
+
+        priceNode.value = getPrice(categorySelected);
+    }
+
+    function initAutoCategory() {
+        var selectNode = rootNode.querySelector('input[name=category]'),
+            auto = searchToObject(location.search);
+
+        if (auto.category && categories[auto.category]) {
+            selectNode.value = auto.category;
+
+            onChangeCategory.call(selectNode, null);
+        }
+    }
+
+    function initListenerCategoriesOptions() {
+        var categoriesNodeList = rootNode.querySelectorAll('.dropdown .menu .item');
+
+        if (categoriesNodeList) {
+            categoriesNodeList.forEach(function (category) {
+                if (category) {
+                    category.addEventListener('click', onChangeCategory);
+                }
+            });
+        }
+    }
+
+    // run
+    if (checkPage()) {
+        initAutoCategory();
+        initListenerCategoriesOptions();
+    }
+
+})();
+
 // slick
 $('.jheader__background').slick({
     arrows: false,

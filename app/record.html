@@ -9,6 +9,7 @@
     <title>ТЕХОСМОТР - БЕЛГОРОД</title>
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
 </head>
 <body>
 
@@ -79,74 +80,96 @@
 </div>
 
 <div class="jtitle">
-    <div class="jtitle__wrap" style="background-image: url(/img/title2.jpg)">
+    <div class="jtitle__wrap" style="background-image: url(/img/price2.jpg)">
         <div class="jtitle__title">
-            Процедура технического осмотра
+            Запись на ТО
         </div>
     </div>
 </div>
 
-<div class="jblock">
+<div class="jblock" id="js-record">
     <div class="jblock__wrap ui container">
-        <div class="jblock__content" style="line-height: 25px">
-            С 1 января 2012 года в силу вступили новые правила прохождения техосмотра. Самые существенные из новшеств нацелены на упрощение и ускорение процесса ТО. Функции техосмотра переданы от МВД независимым операторам технического осмотра. Проводить ТО могут не только государственные структуры, но и частные компании, получившие аккредитацию в РСА. Проводить выборочный техосмотр транспортных средств отдельных марок разрешили авторизованным дилерам, имеющим договор с производителем и (или) импортёром автомобилей (такие дилеры также должны получить аккредитацию в РСА). Российский союз автостраховщиков (РСА) аккредитовывает операторов техосмотра, ведёт их реестр, контролирует деятельность операторов ТО и проводит проверки.
-        </div>
-    </div>
-</div>
+        <div class="jblock__content" style="display: flex; justify-content: center">
+            <form class="ui form" style="width: 350px">
+                <div class="field">
+                    <label>Имя</label>
+                    <input type="text" name="first-name" placeholder="Имя..." required />
+                </div>
+                <div class="field">
+                    <label>E-mail</label>
+                    <input type="text" name="last-name" placeholder="example@mail.ru" required />
+                </div>
+                <div class="field">
+                    <label>Категория машины</label>
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="category" value="m1">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Категория</div>
+                        <div class="menu">
+                            <div class="item" data-value="m1">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-m1" style="font-size: 40px; padding-right: 10px;"></i>
+                                    B (M1)
+                                </div>
+                            </div>
+                            <div class="item" data-value="n1">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-n1" style="font-size: 40px; padding-right: 10px;"></i>
+                                    B (N1)
+                                </div>
+                            </div>
+                            <div class="item" data-value="m2">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-m2" style="font-size: 40px; padding-right: 10px;"></i>
+                                    D (M2)
+                                </div>
+                            </div>
+                            <div class="item" data-value="m3">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-m3" style="font-size: 40px; padding-right: 10px;"></i>
+                                    D (M3)
+                                </div>
+                            </div>
+                            <div class="item" data-value="n2">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-n2" style="font-size: 40px; padding-right: 10px;"></i>
+                                    C (N2)
+                                </div>
+                            </div>
+                            <div class="item" data-value="n3">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-n3" style="font-size: 40px; padding-right: 10px;"></i>
+                                    C (N3)
+                                </div>
+                            </div>
+                            <div class="item" data-value="o12">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-o1-2" style="font-size: 40px; padding-right: 10px;"></i>
+                                    E (O1, O2)
+                                </div>
+                            </div>
+                            <div class="item" data-value="o34">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-o3-4" style="font-size: 40px; padding-right: 10px;"></i>
+                                    E (O3, O4)
+                                </div>
+                            </div>
+                            <div class="item" data-value="l">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="icon-l" style="font-size: 40px; padding-right: 10px;"></i>
+                                    A (L)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="jstepper-block" style="background-image: url(/img/title0.jpg)">
-    <div class="ui container">
-        <div class="jstepper-block__wrap">
-            <div class="jstepper-block__content">
-                <div class="jstepper-block__item">
-                    <div class="jstep" data-image="/img/title0.jpg">
-                        <div class="jstep__title">
-                            <i class="ruble sign icon" style="padding-right: 25px"></i>
-                            Оплата
-                        </div>
-                        <div class="jstep__content">
-                            До начала проведения технического диагностирования производится оплата услуг, оказываемых по договору о проведении технического осмотра, что подтверждает заключение указанного договора.
-                        </div>
-                    </div>
                 </div>
-                <div class="jstepper-block__item">
-                    <div class="jstep" data-image="/img/title1.jpg">
-                        <div class="jstep__title">
-                            <i class="handshake icon" style="padding-right: 25px"></i>
-                            Документы
-                        </div>
-                        <div class="jstep__content jstep__content-hide">
-                            Владелец транспортного средства или его представитель для технического осмотра представляет транспортное средство и следующие документы:
-                            <ul style="margin: 0; padding-left: 20px">
-                                <li>документ, удостоверяющий личность, и доверенность (для представителя владельца транспортного средства);</li>
-                                <li>свидетельство о регистрации транспортного средства или паспорт транспортного средства.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="field">
+                    <label>Цена</label>
+                    <input type="text" name="price" value="500" disabled />
                 </div>
-                <div class="jstepper-block__item">
-                    <div class="jstep" data-image="/img/title2.jpg">
-                        <div class="jstep__title">
-                            <i class="coffee icon" style="padding-right: 25px"></i>
-                            ТО + ОСАГО
-                        </div>
-                        <div class="jstep__content jstep__content-hide">
-                            После проведения ТО вы можете оформить полис Осаго
-                        </div>
-                    </div>
-                </div>
-                <div class="jstepper-block__item">
-                    <div class="jstep" data-image="/img/title11.jpg">
-                        <div class="jstep__title">
-                            <i class="truck icon" style="padding-right: 25px"></i>
-                            Получение
-                        </div>
-                        <div class="jstep__content jstep__content-hide">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae eius fugit iure labore perferendis placeat possimus quas quia, quidem ratione sequi similique tempora veniam? Dolores ducimus eaque odit!
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <button class="ui button fluid" type="submit">Записаться</button>
+            </form>
         </div>
     </div>
 </div>

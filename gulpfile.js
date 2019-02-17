@@ -29,7 +29,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jsLib', function() {
 	return gulp.src([
-			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/jquery/dist/jquery.js',
 			'node_modules/slick-carousel/slick/slick.min.js',
             'node_modules/semantic-ui-css/semantic.min.js',
         	'app/components/blocks/jstepper-block/index.js',
