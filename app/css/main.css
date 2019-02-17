@@ -25190,7 +25190,7 @@ body.pushable > .pusher {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 60px; }
+  padding-top: 60px; }
   .jblock__title_align-left {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -25213,13 +25213,13 @@ body.pushable > .pusher {
 .jblock__title_only {
   font-size: 2.5rem;
   line-height: 3rem;
-  margin-top: 60px;
-  margin-bottom: 60px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
   .jblock__title_only:after {
     content: none; }
 
 .jblock__content {
-  margin-top: 60px;
+  padding-top: 60px;
   font-size: 14px;
   letter-spacing: .5px;
   line-height: 24px; }
